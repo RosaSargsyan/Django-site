@@ -1,0 +1,43 @@
+
+{% extends 'base.html' %}
+
+{% block title %}Blog{% endblock %}
+
+
+{% block name %}Blog{% endblock %}
+
+
+{% block content %}
+
+
+      </div>
+      <!-- blog -->
+      {% for i in blog_list %}
+      <div class="blog">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="titlepage text_align_center ">
+                     <h2>{{blog_list.titl}}</h2>
+                     <p>{{blog_list.text}}</p>
+                  </div>
+               </div>
+            </div>
+            <div class="row d_flex">
+               <div class=" col-md-4">
+                  <div class="latest">
+                     <figure><img src="{{ i.img.url }}" alt="#"/></figure>
+                     <span>{{i.data}}</span>
+                     <div class="nostrud">
+                        <h3>{{i.name}}</h3>
+                        <p>{{i.about}}</p>
+                        <a class="read_more" href="blog.html">Read More</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      {% endfor %}
+      <!-- end blog -->
+{% endblock %} 

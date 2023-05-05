@@ -1,0 +1,46 @@
+
+{% extends 'base.html' %}
+
+{% block title %}Contact{% endblock %}
+
+
+{% block name %}Contact{% endblock %}
+
+
+{% block content %}
+
+
+
+         <!-- end header inner -->
+      </div>
+      <!-- end banner -->
+      <!-- appointment -->
+      <div class="appointment">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12 ">
+                  <div class="titlepage text_align_center">
+                     <h2>'Contact us'</h2>
+                  </div>
+               </div>
+               <div class="col-md-12">
+                  <form method="post" class="main_form">
+                     {% csrf_token %}
+                     <div class="row">
+                        <div class="col-md-6 ">
+                           <input class="form_control" placeholder="Your name" type="type" name="name"> 
+                        </div>
+                        <div class="col-md-6 ">
+                           <input class="form_control" placeholder="Text" type="text" name="text"> 
+                        </div>
+                        <div class="col-md-12">
+                           <button class="send_btn">Send Now</button>
+                        </div>
+                     </div>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- end appointment -->
+{% endblock %} 
